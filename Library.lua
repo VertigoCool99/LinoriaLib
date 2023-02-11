@@ -1940,7 +1940,7 @@ end
 function Library:Notify(NotiText,duration)
     local drawings = {}
     table.insert(Notifications,NotiText)
-    drawings.backbox = draw("Square",{Thickness=1,Filled=true,Color =Library.BackgroundColor,ZIndex = -10})
+    drawings.backbox = draw("Square",{Thickness=1,Filled=true,Color = Library.BackgroundColor,ZIndex = -10})
     drawings.boxout = draw("Square",{Thickness=1,Filled=false,Color = Library.AccentColor,ZIndex = -9})
     drawings.text = draw("Text",{Text ="",Font=2,Size=13,Center=false,Outline=false,Color = Library.FontColor,ZIndex = -9})
     
