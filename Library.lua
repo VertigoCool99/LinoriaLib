@@ -1940,9 +1940,9 @@ end
 function Library:Notify(NotiText,duration)
     local drawings = {}
     table.insert(Notifications,NotiText)
-    drawings.backbox = draw("Square",{Thickness=1,Filled=true,Color = Color3.fromRGB(28, 28, 36),ZIndex = -10})
-    drawings.boxout = draw("Square",{Thickness=1,Filled=false,Color = Color3.fromRGB(253, 168, 15),ZIndex = -9})
-    drawings.text = draw("Text",{Text ="",Font=2,Size=13,Center=false,Outline=false,Color = Color3.fromRGB(255, 255, 255),ZIndex = -9})
+    drawings.backbox = draw("Square",{Thickness=1,Filled=true,Color =Library.BackgroundColor,ZIndex = -10})
+    drawings.boxout = draw("Square",{Thickness=1,Filled=false,Color = Library.AccentColor,ZIndex = -9})
+    drawings.text = draw("Text",{Text ="",Font=2,Size=13,Center=false,Outline=false,Color = Library.FontColor,ZIndex = -9})
     
     drawings.backbox.Position = Vector2.new(camera.ViewportSize.X / camera.ViewportSize.X,camera.ViewportSize.Y / 8)
     drawings.backbox.Position = Vector2.new(drawings.backbox.Position.X,drawings.backbox.Position.Y+#Notifications*drawings.backbox.Size.Y*1.75)
