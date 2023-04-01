@@ -94,9 +94,10 @@ MyButton2:AddTooltip('This is a sub button')
         :AddButton('Kick all', Functions.KickAll):AddTooltip('This will kick everyone in the game!')
 ]]
 
--- Groupbox:AddLabel
+-- Groupbox:Add
 -- Arguments: Text, DoesWrap
-LeftGroupBox:AddLabel('This is a label')
+local NewLabel = LeftGroupBox:AddLabel('This is a label')
+NewLabel:SetText("Text Changed")
 LeftGroupBox:AddLabel('This is a label\n\nwhich wraps its text!', true)
 
 -- Groupbox:AddDivider
